@@ -86,6 +86,18 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./b/sub.js":
+/*!******************!*\
+  !*** ./b/sub.js ***!
+  \******************/
+/*! exports provided: func */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"func\", function() { return func; });\n/* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! fs */ \"fs\");\n/* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(fs__WEBPACK_IMPORTED_MODULE_0__);\n\nconst func = img => {\n  fs__WEBPACK_IMPORTED_MODULE_0___default.a.readFile(img, 'utf8', (err, text) => {\n    console.log('text file!')\n    console.log(text)\n    console.log('error!?')\n    console.log(err)\n  })\n}\n\n\n//# sourceURL=webpack:///./b/sub.js?");
+
+/***/ }),
+
 /***/ "./index.js":
 /*!******************!*\
   !*** ./index.js ***!
@@ -94,19 +106,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lib_fs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/fs */ \"./lib/fs.js\");\n\nconst img = './image/img.txt'\n\nconsole.log(_lib_fs__WEBPACK_IMPORTED_MODULE_0__[\"read\"])\nObject(_lib_fs__WEBPACK_IMPORTED_MODULE_0__[\"read\"])(img)\n\n//# sourceURL=webpack:///./index.js?");
-
-/***/ }),
-
-/***/ "./lib/fs.js":
-/*!*******************!*\
-  !*** ./lib/fs.js ***!
-  \*******************/
-/*! exports provided: read */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"read\", function() { return read; });\n/* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! fs */ \"fs\");\n/* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(fs__WEBPACK_IMPORTED_MODULE_0__);\n\nconst read = img => {\n  fs__WEBPACK_IMPORTED_MODULE_0___default.a.readFile(img, 'utf8', function (err, text) {\n    console.log('text file!')\n    console.log(text)\n    console.log('error!?')\n    console.log(err)\n  })\n}\n\n\n//# sourceURL=webpack:///./lib/fs.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! path */ \"path\");\n/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(path__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _b_sub__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./b/sub */ \"./b/sub.js\");\n\n\nconst text = path__WEBPACK_IMPORTED_MODULE_0___default.a.resolve(__dirname, 'c', 'text.txt')\nObject(_b_sub__WEBPACK_IMPORTED_MODULE_1__[\"func\"])(text)\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 
@@ -129,6 +129,17 @@ eval("module.exports = __webpack_require__(/*! ./index.js */\"./index.js\");\n\n
 /***/ (function(module, exports) {
 
 eval("module.exports = require(\"fs\");\n\n//# sourceURL=webpack:///external_%22fs%22?");
+
+/***/ }),
+
+/***/ "path":
+/*!***********************!*\
+  !*** external "path" ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"path\");\n\n//# sourceURL=webpack:///external_%22path%22?");
 
 /***/ })
 
